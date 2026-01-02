@@ -1,25 +1,54 @@
-#  Image Classification (Naive Bayes, Decision Tree, MLP)
+# Image Classification: Naive Bayes vs Decision Tree vs MLP
 
-This project compares three machine learning models for **image classification**:
-- **Naive Bayes** (baseline using raw pixel values)
-- **Decision Tree** (using HOG features)
-- **Feedforward Neural Network (MLP)** (using HOG + PCA)
+**ENCS3340 – Artificial Intelligence | Project #2**
 
-The goal is to study how feature engineering and model complexity affect performance on natural scene images. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+This repository compares three machine learning models for image classification:
+- **Gaussian Naive Bayes**
+- **Decision Tree**
+- **Feedforward Neural Network (MLPClassifier)**
 
 ---
 
 ## Dataset
 
-This project uses a subset of the **Intel Image Classification Dataset** (Kaggle), originally published by **Puneet Chawla**.  
-The full dataset contains 6 natural scene categories (buildings, forest, glacier, mountain, sea, street). In this study, we selected **three classes**: **glacier**, **forest**, and **mountain**. :contentReference[oaicite:2]{index=2}
+This project is based on the **Intel Image Classification Dataset** (Kaggle), created by **Puneet Chawla**.
 
-### Notes about the dataset folder
-- The `datasets/` folder is usually **too big** to upload to GitHub.
-- Recommended: keep the dataset locally, and upload only a small sample (optional).
+- Dataset: Natural scene images
+- Typical categories include: buildings, forest, glacier, mountain, sea, street
+- In our experiments, we focus on selected classes depending on the project setup.
 
-### Download (Kaggle)
-Use this dataset page:
-```text
-Intel Image Classification Dataset (Kaggle) - by Puneet Chawla
-https://www.kaggle.com/datasets/puneet6060/intel-image-classification
+**Download from Kaggle:**
+- Intel Image Classification Dataset (Kaggle)
+
+> Note: The full dataset is not included in this GitHub repo because it is large.
+
+---
+
+## What’s Inside
+
+- Data loading + preprocessing
+- Feature extraction (if used in your code)
+- Training and testing for:
+  - Naive Bayes
+  - Decision Tree
+  - MLP
+- Evaluation using accuracy (and any other metrics you implemented)
+
+---
+
+## How to Run
+
+```bash
+# (Optional) Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+# venv\Scripts\activate    # Windows
+
+# Install requirements
+pip install numpy scikit-learn opencv-python scikit-image matplotlib
+
+# Dataset setup (place the Intel dataset locally)
+
+
+# Run the program
+python main.py
